@@ -1,0 +1,158 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #d9eafc;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #be56d3;
+  }
+  
+  /* Container Setup */
+  .container {
+    display: flex;
+  }
+  
+  /* Sidebar Navigation */
+  .sidebar {
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+  }
+
+  .sidebar a:hover, .sidebar a.active {
+    background-color: #e2ecf8;
+    color: #2b4a9b;
+  }
+
+  .sidebar a img {
+    width: 24px;
+    margin-right: 10px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  .icons span {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .date {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Breaking News Section */
+  .breaking-news {
+    background-color: #00509e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .breaking-news h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .breaking-news img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Content Section */
+  .content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .news {
+    flex: 2;
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .news img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .sidebar-right {
+    flex: 1;
+    background-color: #d1c4e9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .sidebar-right h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-right p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #000000;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
