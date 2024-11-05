@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wikipedia</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.sidebar h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .sidebar .suggestion {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar .suggestion span {
+            font-size: 14px;
+            color: #333;
+        }
+
+.post {
+    background-color: #b3d1e3;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.post h4 {
+    margin: 0;
+    font-size: 16px;
+}
+.post p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+.reaction {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+.reaction span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.input-container input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1>Wikipedia</h1>
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia Logo">
+
+      <p align="center">Free knowledge for everyone</p>
+      <nav>
+        <ul>
+            <li><a href="./index.html">Home 🏠 </a></li>
+            <li><a href="./news.html">News 📰 </a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Law_of_cosines">Wiki 📘 </a></li>
+            <li><a href="./topic.html">Topics 📂 </a></li>
+            <li><a href="./comunity.html">Community 👥 </a></li>
+            <li><a href="./index.html">Support ❓ </a></li>
+            <li><a href="./donation.html">Donation 💰 </a></li>
+            <li><a href="./contact.html">Contact 📞 </a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Wikipedia:About">About us ℹ️ </a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <input type="text" placeholder="Search..." id="search-bar">
+        <div class="icons">
+          <span id="bell-icon">🔔</span>
+          <span>👤</span>
+          <span>⚙️</span>
+        </div>
+        <span class="date">Sep 29, 2024</span>
+      </header>
+
+      
+      <div class="header">
+        Community
+    </div>
+
+    <div class="input-container">
+        <input type="text" placeholder="What do you want to ask or share">
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="post">
+                <h4>TranManHung <span style="font-size: 12px; color: #777;">Oct 3</span></h4>
+                <p>I don't know how to paste Python into PATH in my computer. Do you guys know how it is?</p>
+                <div class="reaction">
+                    <span>👍 10</span>
+                    <span>💬 10</span>
+                </div>
+            </div>
+            <div class="post">
+                <h4>TranManHung <span style="font-size: 12px; color: #777;">Oct 3</span></h4>
+                <p>I don't know how to paste Python into PATH in my computer. Do you guys know how it is?</p>
+                <div class="reaction">
+                    <span>👍 10</span>
+                    <span>💬 10</span>
+                </div>
+            </div>
+            <div class="post">
+                <h4>TranManHung <span style="font-size: 12px; color: #777;">Oct 3</span></h4>
+                <p>I don't know how to paste Python into PATH in my computer. Do you guys know how it is?</p>
+                <div class="reaction">
+                    <span>👍 10</span>
+                    <span>💬 10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>You may know...</h3>
+          
+            <div class="suggestion">
+                <img src="image3.png" alt="User">
+                <span>Pitago rule</span>
+            </div>
+            <hr>
+            <div class="suggestion">
+                <img src="image4.png" alt="User">
+                <span>Who is he?</span>
+            </div>
+        </div>
+    </div>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
