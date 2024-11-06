@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wikipedia</title>
   <link rel="stylesheet" href="style.css">
+  <script src="search_notification.js"></script>
 
   <style>
     body {
@@ -121,6 +122,30 @@
     .submit-btn:hover {
         background-color: #145a9e;
     }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        font-size: 16px;
+        resize: vertical;
+        border-radius: 8px;           /* Bo tròn các cạnh */
+        border: 1px solid #ccc;        /* Viền mặc định */
+        transition: border-color 0.3s; /* Hiệu ứng chuyển màu viền mượt */
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    textarea:focus {
+        outline: none;
+        border-color: #1a4a7b;
+        box-shadow: 0 0 5px rgba(26, 74, 123, 0.3);
+    }
+
+    .form-group label, .form-group input, .form-group textarea {
+        font-family: Arial, sans-serif;
+        font-size: 16px; /* Cập nhật kích thước phông chữ nếu cần */
+    }
 </style>
   
 </head>
@@ -150,11 +175,25 @@
     <!-- Main Content -->
     <main class="main-content">
       <header class="header">
-        <input type="text" placeholder="Search..." id="search-bar">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Tìm kiếm..." oninput="updateSuggestions()">
+            <ul class="suggestions" id="suggestions-list"></ul>
+          </div>
         <div class="icons">
-          <span id="bell-icon">🔔</span>
-          <span>👤</span>
-          <span>⚙️</span>
+            <span class="notification-container">
+                <!-- Biểu tượng chuông thông báo -->
+                <span id="bell-icon" onclick="toggleNotifications()">🔔</span>
+                
+                <!-- Dropdown thông báo -->
+                <span class="notification-dropdown" id="notification-dropdown">
+                    <h4>Thông báo</h4>
+                    <ul id="notification-list">
+                        <!-- Các thông báo sẽ được thêm vào đây bằng JavaScript -->
+                    </ul>
+                    <button onclick="clearNotifications()" class="clear-btn">Xóa tất cả</button>
+            </span>
+            <span><a href="./profile.html">👤</a></span>
+            <span><a href="./start.html">⚙️</a></span>
         </div>
         <span class="date">Sep 29, 2024</span>
       </header>
@@ -193,8 +232,8 @@
                 <input type="email" id="email" placeholder="Email">
             </div>
             <div class="form-group">
-                <label for="phone">Phone number</label>
-                <input type="tel" id="phone" placeholder="Phone number">
+                <label for="opinion">Your Opinion</label>
+                <textarea id="opinion" placeholder="Your Opinion"></textarea>
             </div>
             <button class="submit-btn">Submit</button>
         </div>

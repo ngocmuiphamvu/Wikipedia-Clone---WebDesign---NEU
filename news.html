@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wikipedia</title>
   <link rel="stylesheet" href="style.css">
+  <script src="search_notification.js"></script>
   <style>
     *{
     margin: 0;
@@ -105,7 +106,7 @@ figure{
           <li><a href="./index.html">Home 🏠 </a></li>
             <li><a href="./news.html">News 📰 </a></li>
             <li><a href="https://en.wikipedia.org/wiki/Law_of_cosines">Wiki 📘 </a></li>
-            <li><a href="./topic.html">Topics 📂 </a></li>
+            <li><a href="./topic.html">Topics 📂 </a></li> 
             <li><a href="./comunity.html">Community 👥 </a></li>
             <li><a href="./index.html">Support ❓ </a></li>
             <li><a href="./donation.html">Donation 💰 </a></li>
@@ -118,11 +119,25 @@ figure{
     <!-- Main Content -->
     <main class="main-content">
       <header class="header">
-        <input type="text" placeholder="Search..." id="search-bar">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Tìm kiếm..." oninput="updateSuggestions()">
+          <ul class="suggestions" id="suggestions-list"></ul>
+        </div>
         <div class="icons">
-          <span id="bell-icon">🔔</span>
-          <span>👤</span>
-          <span>⚙️</span>
+          <span class="notification-container">
+            <!-- Biểu tượng chuông thông báo -->
+            <span id="bell-icon" onclick="toggleNotifications()">🔔</span>
+            
+            <!-- Dropdown thông báo -->
+            <span class="notification-dropdown" id="notification-dropdown">
+                <h4>Thông báo</h4>
+                <ul id="notification-list">
+                    <!-- Các thông báo sẽ được thêm vào đây bằng JavaScript -->
+                </ul>
+                <button onclick="clearNotifications()" class="clear-btn">Xóa tất cả</button>
+            </span>
+          <span><a href="./profile.html">👤</a></span>
+          <span><a href="./start.html">⚙️</a></span>
         </div>
         <span class="date">Sep 29, 2024</span>
       </header>
@@ -130,19 +145,15 @@ figure{
       <div class="slider">
         <figure>
             <div class="slide">
-                <h1>Gambar Satu</h1>
                 <img src="image1.jpg" alt="">
             </div>
             <div class="slide">
-                <h1>Gambar Dua</h1>
-                <img src="image.png" alt="">
+                <img src="breaking.png" alt="">
             </div>
             <div class="slide">
-                <h1>Gambar Tiga</h1>
                 <img src="image3.png" alt="">
             </div>
             <div class="slide">
-                <h1>Gambar Empat</h1>
                 <img src="image2.jpg" alt="">
             </div>
         </figure>

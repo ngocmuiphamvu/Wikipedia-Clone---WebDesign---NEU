@@ -1,8 +1,12 @@
+ul {
+  list-style-type: none; /* Loại bỏ dấu chấm */
+}
+
 .content{
   font-size: 2em;
 }
 .image{
-  width=300px;
+  width:300px;
 }
 * {
     margin: 0;
@@ -87,7 +91,7 @@
   
   .header input[type="text"] {
     padding: 10px;
-    width: 200px;
+    width: 450px;
     border: 1px solid #ddd;
     border-radius: 20px;
     outline: none;
@@ -173,4 +177,160 @@
   }
   
 
+ /* SEARCH */
+ .search-container {
+  position: relative;
+  width: 350px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
 
+.search-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0073e6;
+  box-shadow: 0 4px 8px rgba(0, 115, 230, 0.2);
+  transform: scale(1.02);
+}
+
+.suggestions {
+  position: absolute;
+  width: 125%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 250px;
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px;
+  display: none;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+  background-color: #f7f7f7;
+}
+
+.suggestion-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #0073e6;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #0073e6;
+}
+
+
+
+/* Notification */
+
+/* Container bao quanh thông báo và dropdown */
+.notification-container {
+  position: relative;
+  display: inline-block;
+}
+
+#bell-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff9800;
+  transition: transform 0.3s ease;
+}
+
+#bell-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Dropdown thông báo */
+.notification-dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.notification-dropdown h4 {
+  padding: 15px;
+  margin: 0;
+  font-size: 18px;
+  background-color: #0073e6;
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.notification-dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.notification-dropdown li {
+  padding: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 10px;
+}
+
+.notification-dropdown li:hover {
+  background-color: #f9f9f9;
+}
+
+.notification-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.notification-icon {
+  font-size: 18px;
+  color: #0073e6;
+}
+
+.clear-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #0073e6;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #005bb5;
+}
